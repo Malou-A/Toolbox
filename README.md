@@ -4,4 +4,3 @@
 
 
 
-<img src="images/Toolbox.png">
