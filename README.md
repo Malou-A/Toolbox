@@ -6,20 +6,19 @@ The project week allowed us to choose any project and I choose one where I could
 ## Description
 I have created a graphical user interface toolbox for DNA sequences. The program provides 5 different buttons, with different funtions.
 
-**1. Permute** 
+**1. Permute** -
 This button will take a sequence and return all different permutations possible. One can then choose any of sequences and use as a primer in the primer function.
   
-**2. Primer**
+**2. Primer** -
 This button will allow you to enter a primer, and search a sequence for that primer.
   
-**3. GC-content**
+**3. GC-content** -
 This button will calculate the GC-content of a sequence and plot it.
   
-**4. Blast**
+**4. Blast** -
 This button will take a nucleotide sequence and run it against the BLAST database
   
-**5. Translate**
-  
+**5. Translate** -
 This button will take a nucleotide sequence and translate it to the corresponding aminoacid sequence in all frames and directions
   
 
