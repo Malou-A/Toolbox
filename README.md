@@ -32,6 +32,8 @@ Download and install Miniconda3 - https://repo.anaconda.com/miniconda/Miniconda3
 
 in Anaconda prompt (Miniconda3) run commands:
 ```python
+conda create --name toolbox-env python=3.8.3
+conda activate toolbox-env
 conda install matplotlib
 pip install Bio
 ```
