@@ -29,6 +29,9 @@ windowbg = 'pink'
 Buttoncolor = '#e9c4ee'
 Activebuttoncolor = '#faceff'
 
+
+HOME_DIR = '/home/malou/Projects/1_Pythonprojects/Binp16/'
+
 root=Tk()
 root.title('Toolbox')
 root.geometry('160x290')
@@ -119,12 +122,12 @@ def Permutations():
     else:
         oligobox()
 
-def Oligo():
+def Permute():
     global T2
     root6 = Toplevel(bg = windowbg)
-    root6.title('Oligo')
+    root6.title('Permute')
     root6.geometry('160x130')
-    L3 = Label(root6, text = 'Enter oligo:', bg = windowbg)
+    L3 = Label(root6, text = 'Enter sequence:', bg = windowbg)
     L3.place(x = 10, y = 10)
     T2 = Text(root6)
     T2.place(x = 10, y = 40, width = 140, height = 30)
@@ -244,7 +247,7 @@ def Primersearch():
 
     Querysequence = T1.get(1.0,END).rstrip().upper()
     end = -1
-    Primerfile = open('/home/malou/Pythonprojekt/Primer.txt', 'w')
+    Primerfile = open(HOME_DIR + 'Primer.txt', 'w')
     for sequence in sequencelist:
         start = 0
         positionlist = []
@@ -262,7 +265,7 @@ def Primersearch():
                 Primerfile.write('{}\n'.format(position))
         Primerfile.write('\n')
     Primerfile.close()
-    want_run = ('"gedit /home/malou/Pythonprojekt/Primer.txt"')
+    want_run = ('"gedit {}Primer.txt"'.format(HOME_DIR))
     os.system('bash -c '  + want_run)
 
 
@@ -317,7 +320,7 @@ def Openfile():
     style.map('TMenubutton', background = [('active',windowbg), ('disabled', windowbg)])
     style.configure('TButton',  background = Buttoncolor, activebackground = Activebuttoncolor)
     style.configure('Horizontal.TScrollbar', troughcolor=Activebuttoncolor, bordercolor=Buttoncolor, background='#ba9cbe', lightcolor='white', darkcolor=Buttoncolor)
-    file = filedialog.askopenfilename(initialdir = "/home/malou/Pythonprojekt")
+    file = filedialog.askopenfilename(initialdir = HOME_DIR)
     root3 = Toplevel(bg = windowbg)
     root3.title('ID-list')
     root3.geometry('260x420')
@@ -481,8 +484,8 @@ def Blastbutton():
     style.configure('Horizontal.TScrollbar', troughcolor=Activebuttoncolor, bordercolor=Buttoncolor, background='#ba9cbe', lightcolor='white', darkcolor=Buttoncolor)
 
 
-    filename = open('/home/malou/Pythonprojekt/Blastfile.txt','w')
-    filename1 = '/home/malou/Pythonprojekt/Blastfile.txt'
+    filename = open(HOME_DIR + 'Blastfile.txt','w+')
+    filename1 = HOME_DIR + 'Blastfile.txt'
     for alignment in blast_record.alignments:
          for hsp in alignment.hsps:
              if hsp.expect < E_VALUE_THRESH:
@@ -567,7 +570,7 @@ def Translate():
         style.configure('TButton',  background = Buttoncolor, activebackground = Activebuttoncolor)
         style.configure('Horizontal.TScrollbar', troughcolor=Activebuttoncolor, bordercolor=Buttoncolor, background='#ba9cbe', lightcolor='white', darkcolor=Buttoncolor)
 
-        saveas = filedialog.asksaveasfilename(initialdir = '/home/malou/Pythonprojekt')
+        saveas = filedialog.asksaveasfilename(initialdir = HOME_DIR)
         Seq = T1.get(1.0,END).upper().rstrip()
         Seqcomplement = Complement(Seq)
         Seqreading = {0:'',1:'',2:''}
@@ -610,8 +613,8 @@ def Translate():
 
 #========================= Buttonsection root window ===========================
 B = {}
-ButtonNames = ['Oligo', 'Primer', 'GC-content', 'Blast', 'Translate']
-CommandList = [Oligo, Primer, GCcontent, Blast, Translate]
+ButtonNames = ['Permute', 'Primer', 'GC-content', 'Blast', 'Translate']
+CommandList = [Permute, Primer, GCcontent, Blast, Translate]
 for i in range(len(ButtonNames)):
     B[i] = Button(root, text = ButtonNames[i], borderwidth = 4, command = CommandList[i], background  = Buttoncolor, activebackground = Activebuttoncolor)
     B[i].place(x = 30, y = 10 + 55*i, height = 50, width = 100)
