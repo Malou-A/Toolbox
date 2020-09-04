@@ -26,9 +26,31 @@ This button will take a nucleotide sequence and translate it to the correspondin
 
 In the file **Toolbox.py** The variable "HOME_DIR" needs to be changed to the absolute path of where the file is located.
 
+Install miniconda to create a conda environment:
+### Windows
+Download and install Miniconda3:
+
+https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+
+### Linux
+Download
+
+https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+Install:
+```bash
+bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+```
+### Create environment
+
+Create a conda environment
+
+
 Using python version 3.8.3, these additional packages needs to be installed:
-```python
-$ pip install matplotlib
+```bash
+$ conda create --name toolbox-env python=3.8.3
+$ conda activate toolbox-env
+$ conda install matplotlib
 $ pip install Bio
 ```
 
