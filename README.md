@@ -35,12 +35,12 @@ in Anaconda prompt (Miniconda3) run commands:
 conda install matplotlib
 pip install Bio
 ```
-
+now run Toolbox.py
 
 ### For Linux users
 Download miniconda - https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-In bash terminal:
+In bash terminal run:
 ```bash
 $ bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 $ conda create --name toolbox-env python=3.8.3
@@ -48,8 +48,7 @@ $ conda activate toolbox-env
 $ conda install matplotlib
 $ pip install Bio
 ```
-
-The toolbox will open when the script is executed.
+now run Toolbox.py
 
 <p align="center">
 <img src="images/Toolbox_img.png" align="center">
