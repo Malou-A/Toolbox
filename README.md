@@ -58,11 +58,16 @@ now run Toolbox.py
 
 ## Permute Button
 
+Pressing this button will pop up a window where one can write any sequence and get the different permutations provided from it.
+
 <p align="center">
 <img src="images/Permute.png" align="center">
 </p>
 
 ## Primer Button
+
+The primer function will allow you to write a sequence containing one or several of the 11 bases provided. You can chose to see what possible sequences the primer can represent, or search in a fasta file for any of the possible sequences generated from the primer.
+
 
 <p align="center">
 <img src="images/Primer.png" align="center">
@@ -70,16 +75,21 @@ now run Toolbox.py
 
 ## GC-Content Button
 
+This function will allow you to write a sequence or add a sequence from an existing fasta file, and generate a plot with the GC-content of the sequence in different positions. One can choose the size of the window where the GC content is calculated, and how many steps to move forward in the sequence for each calculation
+
 <p align="center">
 <img src="images/GCcontent.png" align="center">
   
 ## Blast Button
 
+The Blast button will search the NCBI database for the given sequence, and return a file containing all matches found.
 <p align="center">
 <img src="images/BLAST.png" align="center">
 </p>
 
 ## Translate Button
+
+The Translation function will take a nucleotide sequence and translate it to the corresponing aminoacid sequence in all different frames.
 
 <p align="center">
 <img src="images/Translate.png" align="center">
