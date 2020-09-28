@@ -53,6 +53,34 @@ $ pip install Bio
 now run Toolbox.py
 
 <p align="center">
-<img src="images/Toolbox_img.png" align="center">
+<img src="images/Toolbox_main.png" align="center">
 </p>
 
+## Permute Button
+
+<p align="center">
+<img src="images/Permute.png" align="center">
+</p>
+
+## Primer Button
+
+<p align="center">
+<img src="images/Primer.png" align="center">
+</p>
+
+## GC-Content Button
+
+<p align="center">
+<img src="images/GCcontent.png" align="center">
+  
+## Blast Button
+
+<p align="center">
+<img src="images/BLAST.png" align="center">
+</p>
+
+## Translate Button
+
+<p align="center">
+<img src="images/Translate.png" align="center">
+</p>
